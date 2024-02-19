@@ -5,7 +5,7 @@
  * 
  */
 
-
+import 'dotenv/config'
 // import the database which we created
 // import Database from "./jsonDatabase.js"
 import Database from "./interface.js"
@@ -34,7 +34,7 @@ import Order from "./models/Order.js";
 const app = express()
 
 //declare the port 
-const port = 3000
+const port = process.env.PORT
 
 // middleware to convert body param to json
 app.use(express.json());
